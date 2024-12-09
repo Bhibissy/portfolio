@@ -1,0 +1,175 @@
+/* Réinitialisation et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #0a192f; /* Fond sombre inspiré du réseau */
+    color: #ccd6f6; /* Couleur de texte clair */
+    line-height: 1.6;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation */
+nav {
+    background-color: #112240; /* Couleur sombre pour navigation */
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s;
+}
+nav:hover {
+    background-color: #0a1a2f;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+nav ul li a:hover {
+    color: #4caf50;
+    transform: scale(1.1);
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #112240, #0a192f);
+    color: white;
+    margin-bottom: 30px;
+    position: relative;
+    animation: fadeIn 1.5s ease-out;
+}
+header h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+header p {
+    font-size: 1.2em;
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Animation d'apparition */
+.fade-in {
+    animation: fadeIn 1.5s ease-out;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+    background-color: #0d2438; /* Arrière-plan sombre */
+}
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #4caf50;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #4caf50;
+    margin: 10px auto 0;
+}
+
+/* Mise en forme des éléments */
+.skill, .experience-item, .education-item, .language-item, .project {
+    background: #112240; /* Arrière-plan style carte */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.skill:hover, .experience-item:hover, .education-item:hover, .project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    background-color: #0a1a2f;
+}
+
+/* Formulaire de contact */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #112240;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+#contact form label {
+    font-weight: bold;
+    margin-top: 20px;
+    color: #4caf50;
+}
+#contact form input, #contact form textarea {
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #4caf50;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #0a192f;
+    color: #ccd6f6;
+}
+#contact form button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#contact form button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #112240;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 1.1em;
+}
+
