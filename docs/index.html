@@ -7,6 +7,7 @@
     <title>Depardieu Bhibissy</title>
     <style>
         /* Réinitialisation et styles de base */
+        /* Réinitialisation et styles de base */
         * {
             margin: 0;
             padding: 0;
@@ -16,6 +17,7 @@
         body {
             font-family: 'Roboto', Arial, sans-serif;
             background-color: #f9f9f9;
+            /* Couleur de fond plus claire */
             color: #333;
             line-height: 1.6;
         }
@@ -35,6 +37,12 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            /* Ombre plus légère */
+            transition: background-color 0.3s;
+        }
+
+        nav:hover {
+            background-color: #333;
         }
 
         nav ul {
@@ -42,6 +50,7 @@
             display: flex;
             justify-content: center;
             gap: 30px;
+            margin: 0;
         }
 
         nav ul li a {
@@ -64,6 +73,8 @@
             background-color: #1e293b;
             color: white;
             margin-bottom: 30px;
+            position: relative;
+            animation: fadeIn 1.5s ease-out;
         }
 
         header h1 {
@@ -79,6 +90,23 @@
             margin: 0 auto;
         }
 
+        /* Animation d'apparition */
+        .fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* Sections */
         section {
             padding: 60px 0;
@@ -89,6 +117,9 @@
             font-size: 2.5em;
             margin-bottom: 30px;
             color: #4CAF50;
+            position: relative;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
         }
 
         h2::after {
@@ -100,13 +131,27 @@
             margin: 10px auto 0;
         }
 
-        /* Mise en forme des sections */
+        /* Mise en forme des éléments de liste */
+        #about p,
+        #languages ul li,
+        #skills .skill ul li,
+        #experience ul li,
+        #education ul li,
+        #projects .project p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #555;
+            /* Textes légèrement plus clairs */
+        }
+
+        /* Style des éléments de compétences, expérience, etc. */
         .skill-set,
         .experience-list,
         .education-list,
         .languages-list,
         .projects-list {
-            display: grid;
+            display: flex;
+            flex-direction: column;
             gap: 25px;
         }
 
@@ -119,6 +164,7 @@
             padding: 25px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            /* Ombre plus douce */
             transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
         }
 
@@ -181,58 +227,45 @@
             padding: 30px 0;
             text-align: center;
             font-size: 1.1em;
+            position: relative;
+            animation: fadeIn 1.5s ease-out;
         }
 
-        /* Responsivité */
-        @media (max-width: 1024px) {
-            nav ul {
-                flex-wrap: wrap;
-                gap: 20px;
-            }
+        #contact-info {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
 
-            header h1 {
-                font-size: 3em;
-            }
+.contact-details {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
 
-            .skill-set,
-            .experience-list,
-            .education-list,
-            .languages-list,
-            .projects-list {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
+.contact-details p {
+    margin-bottom: 10px;
+}
 
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
-            }
+.contact-details a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
 
-            .skill-set,
-            .experience-list,
-            .education-list,
-            .languages-list,
-            .projects-list {
-                grid-template-columns: 1fr;
-            }
-        }
+.contact-details a:hover {
+    color: #388E3C;
+}
 
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            header p {
-                font-size: 1em;
-            }
-        }
     </style>
 </head>
 
 <body>
     <!-- En-tête -->
-    <header>
+    <header class="fade-in">
         <h1>Depardieu Bhibissy</h1>
         <p>Bienvenue dans mon portfolio où je présente mes compétences, mon expérience et mes projets dans le domaine de
             l'informatique.</p>
@@ -254,16 +287,30 @@
     </nav>
 
     <!-- Section À propos -->
-    <section id="about">
+    <section id="about" class="fade-in">
         <div class="container">
             <h2>À propos de moi</h2>
             <p>Bonjour, je suis Ben Depardieu Bhibissy, étudiant en BTS SIO option SISR, spécialisé dans
-                l'administration réseau et la gestion des infrastructures informatiques...</p>
+                l'administration réseau et la gestion
+                des infrastructures informatiques. Passionné par les technologies, je m'intéresse particulièrement à la
+                configuration
+                de serveurs, la virtualisation et la sécurité des systèmes. Au cours de mes études, j'ai acquis des
+                compétences pratiques
+                telles que la mise en place de stratégies de groupe, l'installation de serveurs d'impression, et la
+                gestion de machines
+                virtuelles avec des outils comme Proxmox. j'ai aussi des connaissances basiques en développement web
+                (HTML, CSS, JavaScript, PHP) que je compte améliorer au fil du temps. Mon objectif est d'intégrer une
+                équipe
+                dynamique où je pourrai contribuer des projets techniques tout en continuant à développer mes
+                compétences dans l'admi
+                nistration réseau et la cybersécurité. En dehors de mes activités professionnelles, j'apprécie de
+                partager mes connais
+                sances, résoudre des problématiques techniques et explorer les nouvelles tendances du numérique.</p>
         </div>
     </section>
 
     <!-- Section Compétences -->
-    <section id="skills">
+    <section id="skills" class="fade-in">
         <div class="container">
             <h2>Compétences</h2>
             <div class="skill-set">
@@ -291,7 +338,84 @@
         </div>
     </section>
 
-    <!-- Autres sections similaires -->
+    <!-- Section Expérience -->
+    <section id="experience" class="fade-in">
+        <div class="container">
+            <h2>Expérience</h2>
+            <ul class="experience-list">
+                <li class="experience-item"><strong>Expérience académique :</strong> PIX, SECNUM ACADEMIA</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section Formations -->
+    <section id="education" class="fade-in">
+        <div class="container">
+            <h2>Formations</h2>
+            <ul class="education-list">
+                <li class="education-item"><strong>BTS SIO</strong> - Option SISR (2022 - 2024)</li>
+                <li class="education-item"><strong>Baccalauréat Techniques en réseaux et télécommunication</strong></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section Langues -->
+    <section id="languages" class="fade-in">
+        <div class="container">
+            <h2>Langues</h2>
+            <ul class="languages-list">
+                <li class="language-item">Français : Langue maternelle</li>
+                <li class="language-item">Anglais : Niveau B2(niveau intermédiare)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projects" class="fade-in">
+        <div class="container">
+            <h2>Projets</h2>
+            <!-- Projets à afficher ici -->
+            <ul class="experience-list">
+                <p>Projet académique</p>
+                <li class="experience-item">Installation et configuration de machines virtuelles</li>
+                <li class="experience-item">Mappage de lecteur réseau via GPO</li>
+                <li class="experience-item">Mise en place de serveurs d'impression et stratégies de groupe</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="fade-in">
+        <div class="container">
+            <h2>Contact</h2>
+            <form action="submit_form" method="POST">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+
+        <!-- Section Coordonnées -->
+        <section id="contact-info" class="fade-in">
+            <div class="container">
+                <div class="contact-details">
+
+                    <p><strong>Téléphone :</strong> +33 7 75 87 18 88</p>
+                    <p><strong>Email :</strong> <a href="mailto:example@example.com">depardieubhibissy091@gmail.com</a></p>
+                    <p><strong>GitHub :</strong> <a href="https://bhibissy.github.io/portfolio/#contact"
+                            target="_blank">github.com/votre-profil</a></p>
+                </div>
+            </div>
+        </section>
+
+    </section>
 
     <!-- Footer -->
     <footer>
