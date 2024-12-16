@@ -260,6 +260,137 @@
     color: #388E3C;
 }
 
+/* Styles globaux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: #1e293b;
+    color: white;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Sections */
+header, section {
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Images ou blocs ajustables */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Grilles pour les compétences, projets, etc. */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e293b;
+    color: white;
+}
+
+/* RESPONSIVITÉ */
+
+/* Pour les tablettes (moins de 1024px) */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+/* Pour les smartphones (moins de 768px) */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+}
+
+/* Pour les petits téléphones (moins de 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9em;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+}
+
     </style>
 </head>
 
