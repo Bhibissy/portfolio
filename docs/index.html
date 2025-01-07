@@ -66,31 +66,47 @@
             transform: scale(1.1);
         }
 
-        header {
-            background-image: url('Salle_server.jpg'); /* Utilise ton image comme arrière-plan */
-            background-size: cover; /* L'image couvre toute la largeur et hauteur */
-            background-position: center; /* Centrer l'image */
-            background-repeat: no-repeat; /* Empêche la répétition de l'image */
+          /* Styles pour le header */
+          header {
+            height: 100vh;
+            background-image: url('Salle_server.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            color: rgb(31, 17, 17); /* Couleur du texte pour qu'il ressorte sur l'image */
-            padding: 100px 20px; /* Espace autour du contenu */
             position: relative;
-            animation: fadeIn 1.5s ease-out;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Ajout d'un filtre sombre pour améliorer la lisibilité du texte */
+            z-index: 1;
         }
 
         header h1 {
-            font-size: 3.5em;
-            margin-bottom: 15px;
-            font-weight: 700;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Ombre pour rendre le texte plus lisible */
+            font-size: 3em;
+            z-index: 2;
+            position: relative;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
-    
+
         header p {
             font-size: 1.2em;
-            font-weight: 400;
+            z-index: 2;
+            position: relative;
             max-width: 800px;
-            margin: 0 auto;
-            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7); /* Ombre pour rendre le texte plus lisible */
+            margin: 20px auto 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
 
        
