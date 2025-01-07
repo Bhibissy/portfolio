@@ -394,9 +394,22 @@ footer {
     </style>
 </head>
 
+<script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+
 <body>
     <!-- En-tête -->
     <header class="fade-in">
+        
         <h1>Depardieu Bhibissy</h1>
         <p>Bienvenue dans mon portfolio où je présente mes compétences, mon expérience et mes projets dans le domaine de
             l'informatique.</p>
