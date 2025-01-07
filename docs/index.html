@@ -7,7 +7,6 @@
     <title>Depardieu Bhibissy</title>
     <style>
         /* Réinitialisation et styles de base */
-        /* Réinitialisation et styles de base */
         * {
             margin: 0;
             padding: 0;
@@ -16,8 +15,7 @@
 
         body {
             font-family: 'Roboto', Arial, sans-serif;
-            background-color: #f9f9f9;
-            /* Couleur de fond plus claire */
+            background-color: #f0f0f0; /* Couleur de fond plus claire pour le reste du site */
             color: #333;
             line-height: 1.6;
         }
@@ -30,19 +28,18 @@
 
         /* Navigation */
         nav {
-            background-color: #1e293b;
+            background-color: rgba(0, 0, 0, 0.7); /* Fond sombre semi-transparent pour une meilleure lisibilité */
             color: white;
             padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-            /* Ombre plus légère */
             transition: background-color 0.3s;
         }
 
         nav:hover {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.9);
         }
 
         nav ul {
@@ -66,10 +63,10 @@
             transform: scale(1.1);
         }
 
-          /* Styles pour le header */
-          header {
+        /* Styles pour le header */
+        header {
             height: 100vh;
-            background-image: url('Salle_server.jpg');
+            background-image: url('Img/portfolio/Salle_server.jpg'); /* Chemin de ton image */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -89,27 +86,26 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Ajout d'un filtre sombre pour améliorer la lisibilité du texte */
+            background: rgba(0, 0, 0, 0.4); /* Filtre sombre pour améliorer la lisibilité */
             z-index: 1;
         }
 
         header h1 {
-            font-size: 3em;
+            font-size: 3.5em;
             z-index: 2;
             position: relative;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
         }
 
         header p {
-            font-size: 1.2em;
+            font-size: 1.5em;
             z-index: 2;
             position: relative;
             max-width: 800px;
             margin: 20px auto 0;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
         }
 
-       
         /* Animation d'apparition */
         .fade-in {
             animation: fadeIn 1.5s ease-out;
@@ -161,7 +157,6 @@
             font-size: 1.2em;
             line-height: 1.8;
             color: #555;
-            /* Textes légèrement plus clairs */
         }
 
         /* Style des éléments de compétences, expérience, etc. */
@@ -184,7 +179,6 @@
             padding: 25px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            /* Ombre plus douce */
             transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
         }
 
@@ -247,187 +241,103 @@
             padding: 30px 0;
             text-align: center;
             font-size: 1.1em;
-            position: relative;
-            animation: fadeIn 1.5s ease-out;
         }
 
+        /* Section Coordonnées */
         #contact-info {
-    padding: 60px 0;
-    background-color: #f9f9f9;
-}
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
 
-.contact-details {
-    font-size: 1.2em;
-    line-height: 1.8;
-    color: #555;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-}
+        .contact-details {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
 
-.contact-details p {
-    margin-bottom: 10px;
-}
+        .contact-details p {
+            margin-bottom: 10px;
+        }
 
-.contact-details a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
+        .contact-details a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
 
-.contact-details a:hover {
-    color: #388E3C;
-}
+        .contact-details a:hover {
+            color: #388E3C;
+        }
 
-/* Styles globaux */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        /* Grilles pour les compétences, projets, etc. */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
 
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
+        .grid-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
 
-/* Navigation */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 15px;
-    background-color: #1e293b;
-    color: white;
-}
+        /* RESPONSIVITÉ */
+        @media (max-width: 1024px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            nav ul {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1em;
-    transition: color 0.3s;
-}
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
 
-nav ul li a:hover {
-    color: #4CAF50;
-}
-
-/* Sections */
-header, section {
-    padding: 20px 0;
-    text-align: center;
-}
-
-/* Images ou blocs ajustables */
-img, video, iframe {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Grilles pour les compétences, projets, etc. */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.grid-item {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.grid-item:hover {
-    transform: scale(1.05);
-}
-
-/* Pied de page */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #1e293b;
-    color: white;
-}
-
-/* RESPONSIVITÉ */
-
-/* Pour les tablettes (moins de 1024px) */
-@media (max-width: 1024px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-}
-
-/* Pour les smartphones (moins de 768px) */
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    nav ul li a {
-        font-size: 1.2em;
-    }
-
-    header h1 {
-        font-size: 2em;
-    }
-}
-
-/* Pour les petits téléphones (moins de 480px) */
-@media (max-width: 480px) {
-    body {
-        font-size: 0.9em;
-    }
-
-    nav ul li a {
-        font-size: 1em;
-    }
-
-    header h1 {
-        font-size: 1.5em;
-    }
-}
+        @media (max-width: 480px) {
+            body {
+                font-size: 0.9em;
+            }
+            nav ul li a {
+                font-size: 1em;
+            }
+            header h1 {
+                font-size: 1.5em;
+            }
+        }
 
     </style>
-   
-    <style>
-       
-    </style>
-    
 
-<script>
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-    });$
-</script>
+    </script>
+
 </head>
 
 
