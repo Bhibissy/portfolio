@@ -67,12 +67,24 @@
         }
 
         header {
-            background-image: url(' /Img/Salle_server.jpg'); /* Utilise ton image comme arrière-plan */
+            background-image: url(''); /* Utilise ton image comme arrière-plan */
             background-size: cover; /* L'image couvre toute la largeur et hauteur */
             background-position: center; /* Centrer l'image */
             background-repeat: no-repeat; /* Empêche la répétition de l'image */
             text-align: center;
             color: rgb(31, 17, 17); /* Couleur du texte pour qu'il ressorte sur l'image */
+            padding: 100px 20px; /* Espace autour du contenu */
+            position: relative;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        header img {
+            background-image: url(''); /* Utilise ton image comme arrière-plan */
+            background-size: cover; /* L'image couvre toute la largeur et hauteur */
+            background-position: center; /* Centrer l'image */
+            background-repeat: no-repeat; /* Empêche la répétition de l'image */
+            text-align: center;
+            color: rgb(245, 245, 245); /* Couleur du texte pour qu'il ressorte sur l'image */
             padding: 100px 20px; /* Espace autour du contenu */
             position: relative;
             animation: fadeIn 1.5s ease-out;
@@ -419,6 +431,8 @@ footer {
 <body>
     <!-- En-tête -->
         <header  class="fade-in">
+
+        <img src="/Img/Salle_server.jpg" alt="Img.Salle_server">
     
         <h1>Depardieu Bhibissy</h1>
         <p>Bienvenue dans mon portfolio où je présente mes compétences, mon expérience et mes projets dans le domaine de
