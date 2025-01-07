@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Depardieu Bhibissy</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
     <style>
         /* Réinitialisation et styles de base */
         /* Réinitialisation et styles de base */
@@ -80,6 +83,7 @@
             align-items: center;
             text-align: center;
             position: relative;
+            filter: blur(5px); /* Ajout d'un effet de flou */
         }
 
         header::before {
@@ -370,6 +374,13 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    @media (max-width: 768px) {
+    .skill-set {
+        flex-direction: column;
+    }
+}
+
+
     nav ul {
         flex-wrap: wrap;
         gap: 10px;
@@ -426,7 +437,7 @@ footer {
                 behavior: 'smooth'
             });
         });
-    });$
+    });
 </script>
 </head>
 
@@ -553,6 +564,8 @@ footer {
     </section>
 
     <!-- Section Contact -->
+    <div id="form-message"></div>
+
     <section id="contact" class="fade-in">
         <div class="container">
             <h2>Contact</h2>
@@ -582,6 +595,8 @@ footer {
                 </div>
             </div>
         </section>
+
+    
 
     </section>
 
