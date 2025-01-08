@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Depardieu Bhibissy</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
     <style>
         /* Réinitialisation et styles de base */
         /* Réinitialisation et styles de base */
@@ -69,51 +65,30 @@
             transform: scale(1.1);
         }
 
-          /* Styles pour le header */
-          header {
-            height: 100vh;
-            background-image: url('Salle_server.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        /* Header */
+        header {
             text-align: center;
+            padding: 80px 0;
+            background-color: #1e293b;
+            color: white;
+            margin-bottom: 30px;
             position: relative;
-           
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Ajout d'un filtre sombre pour améliorer la lisibilité du texte */
-            z-index: 1;
+            animation: fadeIn 1.5s ease-out;
         }
 
         header h1 {
-            font-size: 3em;
-            z-index: 2;
-            position: relative;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
         }
 
         header p {
             font-size: 1.2em;
-            z-index: 2;
-            position: relative;
+            font-weight: 400;
             max-width: 800px;
-            margin: 20px auto 0;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            margin: 0 auto;
         }
 
-       
         /* Animation d'apparition */
         .fade-in {
             animation: fadeIn 1.5s ease-out;
@@ -284,171 +259,15 @@
     color: #388E3C;
 }
 
-/* Styles globaux */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Navigation */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 15px;
-    background-color: #1e293b;
-    color: white;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1em;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #4CAF50;
-}
-
-/* Sections */
-header, section {
-    padding: 20px 0;
-    text-align: center;
-}
-
-/* Images ou blocs ajustables */
-img, video, iframe {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Grilles pour les compétences, projets, etc. */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.grid-item {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.grid-item:hover {
-    transform: scale(1.05);
-}
-
-/* Pied de page */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #1e293b;
-    color: white;
-}
-
-/* RESPONSIVITÉ */
-
-/* Pour les tablettes (moins de 1024px) */
-@media (max-width: 1024px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (max-width: 768px) {
-    .skill-set {
-        flex-direction: column;
-    }
-}
-
-
-    nav ul {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-}
-
-/* Pour les smartphones (moins de 768px) */
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    nav ul li a {
-        font-size: 1.2em;
-    }
-
-    header h1 {
-        font-size: 2em;
-    }
-}
-
-/* Pour les petits téléphones (moins de 480px) */
-@media (max-width: 480px) {
-    body {
-        font-size: 0.9em;
-    }
-
-    nav ul li a {
-        font-size: 1em;
-    }
-
-    header h1 {
-        font-size: 1.5em;
-    }
-}
-
     </style>
-   
-    <style>
-       
-    </style>
-    
-
-<script>
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-</script>
 </head>
-
 
 <body>
     <!-- En-tête -->
     <header  class="fade-in">
 
         <h1>Depardieu Bhibissy</h1>
-        <p>Bienvenue dans mon portfolio où je présente mes compétences, mon expérience et mes projets dans le domaine de
-            l'informatique.</p>
+        <p>Bienvenue dans mon portfolio où je présente mes compétences, mon expérience et mes projets dans le domaine de l'informatique.</p>
     </header>
     <!-- Navigation -->
     <nav>
@@ -469,22 +288,7 @@ footer {
     <section id="about" class="fade-in">
         <div class="container">
             <h2>À propos de moi</h2>
-            <p>Bonjour, je suis Ben Depardieu Bhibissy, étudiant en BTS SIO option SISR, spécialisé dans
-                l'administration réseau et la gestion
-                des infrastructures informatiques. Passionné par les technologies, je m'intéresse particulièrement à la
-                configuration
-                de serveurs, la virtualisation et la sécurité des systèmes. Au cours de mes études, j'ai acquis des
-                compétences pratiques
-                telles que la mise en place de stratégies de groupe, l'installation de serveurs d'impression, et la
-                gestion de machines
-                virtuelles avec des outils comme Proxmox. j'ai aussi des connaissances basiques en développement web
-                (HTML, CSS, JavaScript, PHP) que je compte améliorer au fil du temps. Mon objectif est d'intégrer une
-                équipe
-                dynamique où je pourrai contribuer des projets techniques tout en continuant à développer mes
-                compétences dans l'admi
-                nistration réseau et la cybersécurité. En dehors de mes activités professionnelles, j'apprécie de
-                partager mes connais
-                sances, résoudre des problématiques techniques et explorer les nouvelles tendances du numérique.</p>
+            <p>Bonjour, je suis Ben Depardieu Bhibissy...</p>
         </div>
     </section>
 
@@ -533,7 +337,7 @@ footer {
             <h2>Formations</h2>
             <ul class="education-list">
                 <li class="education-item"><strong>BTS SIO</strong> - Option SISR (2022 - 2024)</li>
-                <li class="education-item"><strong>Baccalauréat Techniques en réseaux et télécommunication</strong></li>
+                <li class="education-item"><strong>Baccalauréat Scientifique</strong> - Mention Bien (2019 - 2022)</li>
             </ul>
         </div>
     </section>
@@ -564,8 +368,6 @@ footer {
     </section>
 
     <!-- Section Contact -->
-    <div id="form-message"></div>
-
     <section id="contact" class="fade-in">
         <div class="container">
             <h2>Contact</h2>
@@ -596,8 +398,6 @@ footer {
             </div>
         </section>
 
-    
-
     </section>
 
     <!-- Footer -->
@@ -605,5 +405,4 @@ footer {
         <p>Portfolio créé par Ben Depardieu Bhibissy | Tous droits réservés 2024</p>
     </footer>
 </body>
-
 </html>
