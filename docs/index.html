@@ -8,254 +8,249 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
+    
+   
     <style>
-        /* Réinitialisation et styles de base */
-        /* Réinitialisation et styles de base */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+       /* Réinitialisation et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Roboto', Arial, sans-serif;
-            background-color: #f9f9f9;
-            /* Couleur de fond plus claire */
-            color: #333;
-            line-height: 1.6;
-        }
+body {
+    background-image:url("effet_étoile.png") ;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #240420;
+    color: #FF34E7;
+    line-height: 1.6;
+    
+}
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        /* Navigation */
-        nav {
-            background-color: #1e293b;
-            color: white;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-            /* Ombre plus légère */
-            transition: background-color 0.3s;
-        }
+/* Navigation */
+nav {
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        nav:hover {
-            background-color: #333;
-        }
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 0;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 1.1em;
-            font-weight: 500;
-            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
 
-        nav ul li a:hover {
-            color: #4CAF50;
-            transform: scale(1.1);
-        }
+nav ul li a:hover {
+    color: #4CAF50;
+    transform: scale(1.1);
+}
 
-          /* Styles pour le header */
-          header {
-            height: 100vh;
-            background-image: url('Salle_server.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-           
-        }
+/* Styles pour le header */
+header {
+    height: 100vh;
+    background-image: url('Salle_server.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Ajout d'un filtre sombre pour améliorer la lisibilité du texte */
-            z-index: 1;
-        }
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
 
-        header h1 {
-            font-size: 3em;
-            z-index: 2;
-            position: relative;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        }
+header h1 {
+    font-size: 3em;
+    z-index: 2;
+    position: relative;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
 
-        header p {
-            font-size: 1.2em;
-            z-index: 2;
-            position: relative;
-            max-width: 800px;
-            margin: 20px auto 0;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-        }
+header p {
+    font-size: 1.2em;
+    z-index: 2;
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
 
-       
-        /* Animation d'apparition */
-        .fade-in {
-            animation: fadeIn 1.5s ease-out;
-        }
+/* Animation d'apparition */
+.fade-in {
+    animation: fadeIn 1.5s ease-out;
+}
 
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        /* Sections */
-        section {
-            padding: 60px 0;
-        }
+/* Sections */
+section {
+    padding: 60px 0;
+}
 
-        h2 {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            color: #4CAF50;
-            position: relative;
-            opacity: 0;
-            animation: fadeIn 1.5s ease-out forwards;
-        }
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #4CAF50;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
 
-        h2::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 3px;
-            background-color: #4CAF50;
-            margin: 10px auto 0;
-        }
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #4CAF50;
+    margin: 10px auto 0;
+}
 
-        /* Mise en forme des éléments de liste */
-        #about p,
-        #languages ul li,
-        #skills .skill ul li,
-        #experience ul li,
-        #education ul li,
-        #projects .project p {
-            font-size: 1.2em;
-            line-height: 1.8;
-            color: #555;
-            /* Textes légèrement plus clairs */
-        }
+/* Mise en forme des éléments de liste */
+#about p {
+color: white;
+}
+#languages ul li,
+#skills .skill ul li,
+#experience ul li,
+#education ul li,
+#projects .project p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
+}
 
-        /* Style des éléments de compétences, expérience, etc. */
-        .skill-set,
-        .experience-list,
-        .education-list,
-        .languages-list,
-        .projects-list {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
+/* Style des éléments de compétences, expérience, etc. */
+.skill-set,
+.experience-list,
+.education-list,
+.languages-list,
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
 
-        .skill,
-        .experience-item,
-        .education-item,
-        .language-item,
-        .project {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            /* Ombre plus douce */
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-        }
+.skill,
+.experience-item,
+.education-item,
+.language-item,
+.project {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
 
-        .skill:hover,
-        .experience-item:hover,
-        .education-item:hover,
-        .project:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-            background-color: #f1f1f1;
-        }
+.skill:hover,
+.experience-item:hover,
+.education-item:hover,
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    background-color: #f1f1f1;
+}
 
-        /* Formulaire de contact */
-        #contact form {
-            display: flex;
-            flex-direction: column;
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
+/* Formulaire de contact */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-        #contact form label {
-            font-weight: bold;
-            margin-top: 20px;
-        }
+#contact form label {
+    font-weight: bold;
+    margin-top: 20px;
+}
 
-        #contact form input,
-        #contact form textarea {
-            padding: 15px;
-            margin-top: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1em;
-        }
+#contact form input,
+#contact form textarea {
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
 
-        #contact form button {
-            margin-top: 20px;
-            padding: 12px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.2em;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
+#contact form button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-        #contact form button:hover {
-            background-color: #388E3C;
-            transform: scale(1.05);
-        }
+#contact form button:hover {
+    background-color: #388E3C;
+    transform: scale(1.05);
+}
 
-        /* Footer */
-        footer {
-            background-color: #1e293b;
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-            font-size: 1.1em;
-            position: relative;
-            animation: fadeIn 1.5s ease-out;
-        }
+/* Footer */
+footer {
+    background-color: #1e293b;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 1.1em;
+    position: relative;
+    animation: fadeIn 1.5s ease-out;
+}
 
-        #contact-info {
+#contact-info {
     padding: 60px 0;
     background-color: #f9f9f9;
 }
@@ -284,61 +279,6 @@
     color: #388E3C;
 }
 
-/* Styles globaux */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Navigation */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 15px;
-    background-color: #1e293b;
-    color: white;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1em;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #4CAF50;
-}
-
-/* Sections */
-header, section {
-    padding: 20px 0;
-    text-align: center;
-}
-
-/* Images ou blocs ajustables */
-img, video, iframe {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
 /* Grilles pour les compétences, projets, etc. */
 .grid {
     display: grid;
@@ -358,14 +298,6 @@ img, video, iframe {
     transform: scale(1.05);
 }
 
-/* Pied de page */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #1e293b;
-    color: white;
-}
-
 /* RESPONSIVITÉ */
 
 /* Pour les tablettes (moins de 1024px) */
@@ -373,13 +305,6 @@ footer {
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    @media (max-width: 768px) {
-    .skill-set {
-        flex-direction: column;
-    }
-}
-
 
     nav ul {
         flex-wrap: wrap;
@@ -423,10 +348,6 @@ footer {
 }
 
     </style>
-   
-    <style>
-       
-    </style>
     
 
 <script>
@@ -445,25 +366,25 @@ footer {
 <body>
     <!-- En-tête -->
     <header  class="fade-in">
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#experience">Expérience</a></li>
+                    <li><a href="#education">Formations</a></li>
+                    <li><a href="#languages">Langues</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
 
         <h1>Depardieu Bhibissy</h1>
-        <p>Bienvenue dans mon portfolio où je présente mes compétences, mon expérience et mes projets dans le domaine de
-            l'informatique.</p>
+        <p>Bienvenue dans mon portfolio</p>
     </header>
     <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#experience">Expérience</a></li>
-                <li><a href="#education">Formations</a></li>
-                <li><a href="#languages">Langues</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+   
 
     <!-- Section À propos -->
     <section id="about" class="fade-in">
