@@ -11,6 +11,36 @@
     
    
     <style>
+
+        /* Code css pour le boutton*/
+        
+        .button-container {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+        .button {
+            background: linear-gradient(to bottom, #333, #000);
+            color: white;
+            border: 1px solid #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .button:hover {
+            transform: scale(1.1);
+            background: linear-gradient(to bottom, #555, #222);
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4);
+        }
        /* Réinitialisation et styles de base */
 * {
     margin: 0;
@@ -22,7 +52,7 @@ body {
     background-image:url("effet_étoile.png") ;
     font-family: 'Roboto', Arial, sans-serif;
     background-color: #240420;
-    color: #FF34E7;
+    color: #240420;
     line-height: 1.6;
     
 }
@@ -32,9 +62,12 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+/* Hamburger Menu Styles */
+
 
 /* Navigation */
 nav {
+    background-color: black;
     padding: 15px 0;
     position: fixed;
     top: 0;
@@ -359,6 +392,7 @@ footer {
             });
         });
     });
+    
 </script>
 </head>
 
@@ -366,28 +400,36 @@ footer {
 <body>
     <!-- En-tête -->
     <header  class="fade-in">
-        <nav>
-            <div class="container">
-                <ul>
-                    <li><a href="#about">À propos</a></li>
-                    <li><a href="#skills">Compétences</a></li>
-                    <li><a href="#experience">Expérience</a></li>
-                    <li><a href="#education">Formations</a></li>
-                    <li><a href="#languages">Langues</a></li>
-                    <li><a href="#projects">Projets</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-
+            <nav>
+                <div class="container">
+                    <ul>
+                        <li><a href="#about">À propos & CV</a></li>
+                        <li><a href="#skills">Compétences</a></li>
+                        <li><a href="#experience">Expérience</a></li>
+                        <li><a href="#education">Formations</a></li>
+                        <li><a href="#languages">Langues</a></li>
+                        <li><a href="#projects">Projets</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+    
+        
         <h1>Depardieu Bhibissy</h1>
+        <h3>ETUDIANT BTS SIO - OPTION SISR</h3>
         <p>Bienvenue dans mon portfolio</p>
+
+        
+        
     </header>
+
+
     <!-- Navigation -->
    
 
     <!-- Section À propos -->
     <section id="about" class="fade-in">
+
         <div class="container">
             <h2>À propos de moi</h2>
             <p>Bonjour, je suis Ben Depardieu Bhibissy, étudiant en BTS SIO option SISR, spécialisé dans
@@ -407,7 +449,19 @@ footer {
                 partager mes connais
                 sances, résoudre des problématiques techniques et explorer les nouvelles tendances du numérique.</p>
         </div>
+
+       
+
     </section>
+
+    <div class="button-container">
+           
+        <!-- Bouton pour consulter le CV -->
+  <a href="CV.pdf" class="button" target="_blank">Consulter CV</a>
+  <!-- Bouton pour télécharger le CV -->
+  <a href="CV.pdf" class="button" download>Télécharger CV</a>
+
+    </div>
 
     <!-- Section Compétences -->
     <section id="skills" class="fade-in">
@@ -476,7 +530,7 @@ footer {
             <h2>Projets</h2>
             <!-- Projets à afficher ici -->
             <ul class="experience-list">
-                <p>Projet académique</p>
+
                 <li class="experience-item">Installation et configuration de machines virtuelles</li>
                 <li class="experience-item">Mappage de lecteur réseau via GPO</li>
                 <li class="experience-item">Mise en place de serveurs d'impression et stratégies de groupe</li>
@@ -512,7 +566,7 @@ footer {
                     <p><strong>Téléphone :</strong> +33 7 75 87 18 88</p>
                     <p><strong>Email :</strong> <a href="mailto:example@example.com">depardieubhibissy091@gmail.com</a></p>
                     <p><strong>GitHub :</strong> <a href="https://bhibissy.github.io/portfolio/#contact"
-                            target="_blank">github.com/votre-profil</a></p>
+                            target="_blank">bhibissy depardieu</a></p>
                 </div>
             </div>
         </section>
