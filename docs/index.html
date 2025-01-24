@@ -198,13 +198,16 @@ color: white;
 }
 
 /* Style des éléments de compétences, expérience, etc. */
-.skill-set,
+.skill-set{
+           
+   
+}
 .experience-list,
 .education-list,
 .languages-list,
 .projects-list {
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     gap: 25px;
 }
 
@@ -380,7 +383,80 @@ footer {
     }
 }
 
+.container {
+            display: flex;
+            flex-direction: column; /* Aligne les boîtes verticalement */
+            gap: 20px; /* Espace entre les lignes */
+        }
+
+        .row {
+            display: flex;
+            justify-content: center; /* Centre les boîtes dans la ligne */
+            gap: 20px; /* Espace entre les boîtes */
+        }
+
+        .box {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            height: 300px; /* Assure une taille uniforme */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Empêche le dépassement du contenu */
+        }
+
+        .box h2 {
+            margin-top: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .box ul {
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .box ul li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+
+        .contact-details i {
+        color: #007bff; /* Couleur des icônes */
+        margin-right: 10px; /* Espacement entre l'icône et le texte */
+    }
+
+
+    .contact-details img {
+        width: 25px;  /* Modifier la taille des icônes */
+        margin-right: 10px; /* Espacement entre l'icône et le texte */
+        vertical-align: middle; /* Aligner l'icône au milieu du texte */
+    }
+
+    .contact-details p {
+        margin-bottom: 10px; /* Espacement entre les lignes */
+        font-size: 16px; /* Taille du texte */
+    }
+
+    .contact-details a {
+        text-decoration: none; /* Supprime le soulignement des liens */
+        color: inherit; /* Conserve la couleur du texte */
+    }
+
+    .contact-details a:hover {
+        text-decoration: underline; /* Ajoute un soulignement au survol */
+    }
+
+</style>
+
+
+
+</style>
+
     </style>
+    
     
 
 <script>
@@ -394,6 +470,8 @@ footer {
     });
     
 </script>
+
+
 </head>
 
 
@@ -410,7 +488,10 @@ footer {
                         <li><a href="#languages">Langues</a></li>
                         <li><a href="#projects">Projets</a></li>
                         <li><a href="#contact">Contact</a></li>
+
+
                     </ul>
+          
                 </div>
             </nav>
     
@@ -467,25 +548,43 @@ footer {
     <section id="skills" class="fade-in">
         <div class="container">
             <h2>Compétences</h2>
-            <div class="skill-set">
-                <div class="skill">
-                    <h3>Administration Système</h3>
+            <div class="row">$
+                <div class="box">
+                    <h3>Réseaux</h3>
                     <ul>
-                        <li>Gestion de serveurs Linux/Windows</li>
+                        <ul>
+                            <li>Création de machine Virtual sur Proxmox ( Windows server2022, Windows 10Pro, Debian )</li>
+                            <li>Configuration rôle AD/DS</li>
+                            <li>Configuration d'unités d'organisations (OU)</li>
+                            <li> Gestion de Stratégie de Groupe GPO</li>
+                            <li>Configuration et gestion des serveurs d'impressio</li>
+                                
+                        </ul>
+                        
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>Linux</h3>
+                    <ul>
+                        <li> Installation DebianCommande linux de base</li>
                         <li>Virtualisation (Proxmox, VirtualBox)</li>
+                        <li> Server LAMP(Linux, Apache, MySQL, Php)</li>
+                        <li> MySQL(Serveur de Base de donnée)</li>
+                        <li>Installation Glpi / Nextcloud</li>
+                        <li> Gestion de LDAD</li>
+                    
                     </ul>
+                    
                 </div>
-                <div class="skill">
-                    <h3>Réseaux et Sécurité</h3>
+                <div class="box">
+                    <h3>Progammation</h3>
                     <ul>
-                        <li>Configuration de réseaux locaux (LAN)</li>
-                        <li>Gestion des politiques de sécurité</li>
-                    </ul>
-                </div>
-                <div class="skill">
-                    <h3>Développement Web</h3>
-                    <ul>
-                        <li>HTML, CSS, JavaScript, PHP</li>
+                        <li>html/css</li>
+                        <li>Javascipt</li>
+                        <li>Php</li>
+                        <li>C-sharp</li>
+                        <li> Python</li>
+                           
                     </ul>
                 </div>
             </div>
@@ -530,10 +629,19 @@ footer {
             <h2>Projets</h2>
             <!-- Projets à afficher ici -->
             <ul class="experience-list">
+                <li></li>
 
-                <li class="experience-item">Installation et configuration de machines virtuelles</li>
-                <li class="experience-item">Mappage de lecteur réseau via GPO</li>
-                <li class="experience-item">Mise en place de serveurs d'impression et stratégies de groupe</li>
+                <li class="experience-item"><h3>Context APAEIA Premier projet (BTS SIO 2024-2025)</h3><br> 
+                    <p>Sommaire :</p><br>1_Audit de l'existance<br>2_Preparation/Configuration du Serveur Windows 2022 <br>
+                    3_Intégration d'une machine dans le dommaine <br>4_Partage de resources/Lecteurs réseau et Stratégies <br>
+                    5_Partage d'imprimentes et déploiement via GPO<br>6_Installation et configuration d'un HELPDESK (GLPI) <br>
+                    7_Invotorier un parc informatique avec l'agent GLPI <br>8_Installation/Configurationn d'un cloud prive (NEXCLOUD) <br>
+                    
+                </li>
+               
+
+                
+                
             </ul>
         </div>
     </section>
@@ -544,7 +652,7 @@ footer {
     <section id="contact" class="fade-in">
         <div class="container">
             <h2>Contact</h2>
-            <form action="submit_form" method="POST">
+            <form action="submit_form.php" method="POST">
                 <label for="name">Nom</label>
                 <input type="text" id="name" name="name" required>
 
@@ -562,16 +670,30 @@ footer {
         <section id="contact-info" class="fade-in">
             <div class="container">
                 <div class="contact-details">
-
-                    <p><strong>Téléphone :</strong> +33 7 75 87 18 88</p>
-                    <p><strong>Email :</strong> <a href="mailto:example@example.com">depardieubhibissy091@gmail.com</a></p>
-                    <p><strong>GitHub :</strong> <a href="https://bhibissy.github.io/portfolio/#contact"
-                            target="_blank">bhibissy depardieu</a></p>
+                    <!-- Téléphone avec icône -->
+                    <p>
+                        <img src="icone/phone-solid.svg" alt="Téléphone" style="width: 20px; margin-right: 10px;">
+                        <strong>Téléphone :</strong> +33 7 75 87 18 88
+                    </p>
+        
+                    <!-- Email avec icône -->
+                    <p>
+                        <img src="icone/message-solid.svg" alt="Email" style="width: 20px; margin-right: 10px;">
+                        <strong>Email :</strong>
+                        <a href="mailto:depardieubhibissy091@gmail.com" target="_blank">depardieubhibissy091@gmail.com</a>
+                    </p>
+        
+                    <!-- GitHub avec icône -->
+                    <p>
+                        <img src="icone/square-github-brands-solid.svg" alt="GitHub" style="width: 20px; margin-right: 10px;">
+                        <strong>GitHub :</strong>
+                        <a href="https://bhibissy.github.io/portfolio/#contact" target="_blank" 
+                           aria-label="Visitez le portfolio GitHub de bhibissy depardieu">bhibissy depardieu</a>
+                    </p>
                 </div>
             </div>
         </section>
-
-    
+        
 
     </section>
 
