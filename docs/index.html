@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Depardieu Bhibissy - Étudiant en BTS SIO SISR, spécialisé en réseaux, Linux, sécurité informatique.">
     <title>Depardieu Bhibissy</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -231,6 +232,18 @@ color: white;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     background-color: #f1f1f1;
 }
+/* project */
+.experience-list .experience-item .button {
+            background: linear-gradient(to bottom, #333, #000);
+            color: green;
+            border: 1px solid #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 2px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
 
 /* Formulaire de contact */
 #contact form {
@@ -404,6 +417,10 @@ footer {
             height: 300px; /* Assure une taille uniforme */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             overflow: hidden; /* Empêche le dépassement du contenu */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: auto;
         }
 
         .box h2 {
@@ -448,6 +465,8 @@ footer {
     .contact-details a:hover {
         text-decoration: underline; /* Ajoute un soulignement au survol */
     }
+    /* project
+    .
 
 /* Cretification code*/
 /* Section Certifications */
@@ -480,34 +499,47 @@ footer {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 20px;
 }
 
-#certifications .certification-item {
-    width: 300px;
-    height: 400px;
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
+.certifications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-#certifications .certification-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor: pointer;
+.certification-item {
+  width: 200px;
+  transition: transform 0.3s ease;
 }
 
-#certifications .certification-item:hover {
-    transform: translateY(-10px);
+.certification-item img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.certification-item:hover {
+  transform: scale(1.05);
 }
 
 </style>
 
 
 <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});
     document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -522,23 +554,22 @@ footer {
 <script>
     // Fonction de filtrage des certifications
     function filterCertifications(category) {
-        // Récupère toutes les certifications
-        const certifications = document.querySelectorAll('.certification-item');
-        const buttons = document.querySelectorAll('.certification-categories .category');
+    const allCertifs = document.querySelectorAll('.certification-item');
 
-        // Ajout de la classe active au bouton cliqué
-        buttons.forEach((btn) => btn.classList.remove('active'));
-        document.querySelector(`button[onclick="filterCertifications('${category}')"]`).classList.add('active');
-
-        // Affiche ou masque les certifications en fonction de la catégorie
-        certifications.forEach((item) => {
-            if (category === 'all' || item.classList.contains(category)) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
+  allCertifs.forEach(item => {
+    if (category === 'all' || item.classList.contains(category)) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
     }
+  });
+
+  // Facultatif : changer l'état "active" du bouton
+  const buttons = document.querySelectorAll('.category');
+  buttons.forEach(btn => btn.classList.remove('active'));
+  const activeButton = Array.from(buttons).find(btn => btn.textContent.toLowerCase().includes(category));
+  if (activeButton) activeButton.classList.add('active');
+}
 </script>
 
 
@@ -584,7 +615,7 @@ footer {
 
         <div class="container">
             <h2>À propos de moi</h2>
-            <p>Bonjour, je suis Ben Depardieu Bhibissy, étudiant en BTS SIO option SISR, spécialisé dans
+            <p>Bonjour, je suis Ben Depardieu Bhibissy, étudiant en BTS_prépa SIO option SISR, spécialisé dans
                 l'administration réseau et la gestion
                 des infrastructures informatiques.Je suis née en République du Congo (Brazzaville), c'est dans mon pays que j'ai découvert l'informatique dans le domaine des réseaux et télécommunications, et aujourd'huit je poursuis mes études en réseau en France.  Passionné par les technologies, je m'intéresse particulièrement à la
                 configuration
@@ -593,7 +624,7 @@ footer {
                 telles que la mise en place de stratégies de groupe, l'installation de serveurs d'impression, et la
                 gestion de machines
                 virtuelles avec des outils comme Proxmox. j'ai aussi des connaissances basiques en développement web
-                (HTML, CSS, JavaScript, PHP) que je compte améliorer au fil du temps. Mon objectif est d'intégrer une
+                (HTML, CSS) que je compte améliorer au fil du temps. Mon objectif est d'intégrer une
                 équipe
                 dynamique où je pourrai contribuer des projets techniques tout en continuant à développer mes
                 compétences dans l'admi
@@ -609,9 +640,9 @@ footer {
     <div class="button-container">
            
         <!-- Bouton pour consulter le CV -->
-  <a href="CV.pdf" class="button" target="_blank">Consulter CV</a>
+  <a href="CV_2025-04-10_Ben Depardieu_Bhibissy (1).pdf" class="button" target="_blank">Consulter CV</a>
   <!-- Bouton pour télécharger le CV -->
-  <a href="CV.pdf" class="button" download>Télécharger CV</a>
+  <a href="CV_2025-04-10_Ben Depardieu_Bhibissy (1).pdf" class="button" download>Télécharger CV</a>
 
     </div>
 
@@ -621,41 +652,31 @@ footer {
             <h2>Compétences</h2>
             <div class="row">$
                 <div class="box">
-                    <h3>Réseaux</h3>
+                    <h3>Administration systèmes</h3>
                     <ul>
-                        <ul>
-                            <li>Création de machine Virtual sur Proxmox ( Windows server2022, Windows 10Pro, Debian )</li>
-                            <li>Configuration rôle AD/DS</li>
-                            <li>Configuration d'unités d'organisations (OU)</li>
-                            <li> Gestion de Stratégie de Groupe GPO</li>
-                            <li>Configuration et gestion des serveurs d'impressio</li>
-                                
-                        </ul>
-                        
+                        <li>Déploiement de machines virtuelles sur Proxmox (Windows Server 2022, Windows 10 Pro, Debian)</li>
+                        <li>Configuration d’Active Directory (AD/DS), des unités d'organisation (OU) et des stratégies de groupe (GPO)</li>
+                        <li>Gestion de serveurs d’impression</li>
+                        <li>Déploiement multicast avec Fog</li>
+  
                     </ul>
                 </div>
-                <div class="box">
+            <div class="box">
                     <h3>Linux</h3>
                     <ul>
-                        <li> Installation DebianCommande linux de base</li>
-                        <li>Virtualisation (Proxmox, VirtualBox)</li>
-                        <li> Server LAMP(Linux, Apache, MySQL, Php)</li>
-                        <li> MySQL(Serveur de Base de donnée)</li>
-                        <li>Installation Glpi / Nextcloud</li>
-                        <li> Gestion de LDAD</li>
-                    
+                        <li>Installation et administration de serveurs Debian et services réseau</li>
+                        <li>Mise en place et gestion de serveurs LAMP (Linux, Apache, MySQL, PHP)</li>
+                        <li>Configuration de services : GLPI, Nextcloud, LDAP</li>
+                        <li>Conteneurisation avec Docker<li>
+                        
                     </ul>
                     
-                </div>
-                <div class="box">
-                    <h3>Progammation</h3>
+            </div>
+            <div class="box">
+                    <h3>Dévéloppement Web</h3>
                     <ul>
                         <li>html/css</li>
-                        <li>Javascipt</li>
-                        <li>Php</li>
-                        <li>C-sharp</li>
-                        <li> Python</li>
-                           
+                        <li>WordPress</li>
                     </ul>
                 </div>
             </div>
@@ -690,7 +711,7 @@ footer {
             <div class="certification-categories">
                 <button class="category active" onclick="filterCertifications('all')">Tous</button>
                 <button class="category" onclick="filterCertifications('linux')">Linux</button>
-                <button class="category" onclick="filterCertifications('cisco')">Pix</button>
+                <button class="category" onclick="filterCertifications('cisco')">Cisco</button>
                 <button class="category" onclick="filterCertifications('mooc-anssi')">MOOC ANSSI</button>
                 
             </div>
@@ -699,18 +720,23 @@ footer {
             <div class="certification-grid">
                 <!-- Exemple de certification (à dupliquer pour chaque PDF) -->
                 <div class="certification-item linux">
-                    <a href="certificat_cursa.pdf" target="_blank">
-                        <img src="certificat_cursa.png" alt="Certification Linux">
+                    <a href="cursa/certificat_cusa_winserv19.pdf" target="_blank">
+                      <img src="certificat_cursa.png" alt="Certification Windows Server">
                     </a>
-                </div>
+                  </div>
+                  <div class="certification-item linux">
+                    <a href="cursa/certificat_cursa_linux.pdf" target="_blank">
+                      <img src="certificat_cursa.png" alt="Certification Linux">
+                    </a>
+                  </div>
                 <div class="certification-item cisco">
                     <a href="" target="_blank">
-                        <img src="pix.png" alt="Certification Cisco">
+                        <img src="netacad7.jpg" alt="Certification Cisco">
                     </a>
                 </div>
                 <div class="certification-item mooc-anssi">
-                    <a href="path/to/certification-mooc-anssi.pdf" target="_blank">
-                        <img src="path/to/mooc-anssi-thumbnail.png" alt="Certification MOOC ANSSI">
+                    <a href="présentationcertif.pdf" target="_blank">
+                        <img src="images.jpg" alt="Certification MOOC ANSSI">
                     </a>
                 </div>
                 <!-- Ajoutez d'autres certifications ici -->
@@ -736,15 +762,12 @@ footer {
             <h2>Projets</h2>
             <!-- Projets à afficher ici -->
             <ul class="experience-list">
-                <li></li>
 
-                <li class="experience-item"><h3>Context APAEIA Premier projet (BTS SIO 2024-2025)</h3><br> 
-                    <p>Sommaire :</p><br>1_Audit de l'existance<br>2_Preparation/Configuration du Serveur Windows 2022 <br>
-                    3_Intégration d'une machine dans le dommaine <br>4_Partage de resources/Lecteurs réseau et Stratégies <br>
-                    5_Partage d'imprimentes et déploiement via GPO<br>6_Installation et configuration d'un HELPDESK (GLPI) <br>
-                    7_Invotorier un parc informatique avec l'agent GLPI <br>8_Installation/Configurationn d'un cloud prive (NEXCLOUD) <br>
-                    
+                <li class="experience-item">
+                    <h3>Context APAEIA : <div class="button"> <button><a href="Contexte APAEIA.pdf">Mission_réaliser</a></button> </div></h3>
+                    <h3>Server APACHE : <div class="button"> <button><a href="virtualhostAPACHE.pdf">Mission_réaliser</a></button> </div></h3>
                 </li>
+                
                
 
                 
@@ -752,6 +775,7 @@ footer {
             </ul>
         </div>
     </section>
+    
 
     <!-- Section Contact -->
     <div id="form-message"></div>
@@ -793,7 +817,7 @@ footer {
                     <!-- GitHub avec icône -->
                     <p>
                         <img src="icone/square-github-brands-solid.svg" alt="GitHub" style="width: 20px; margin-right: 10px;">
-                        <strong>GitHub :</strong>
+                        <strong>portfolio :</strong>
                         <a href="https://bhibissy.github.io/portfolio/#contact" target="_blank" 
                            aria-label="Visitez le portfolio GitHub de bhibissy depardieu">bhibissy depardieu</a>
                     </p>
